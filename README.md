@@ -132,7 +132,7 @@ name: CI
   pull_request:
   push:
     branches:
-      - master
+      - main
 
 jobs:
 
