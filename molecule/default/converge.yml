@@ -9,4 +9,10 @@
         cache_valid_time: 3600
       when: ansible_os_family == 'Debian'
 
+    - name: download sources
+      get_url:
+        url: https://raw.githubusercontent.com/gdraheim/docker-systemctl-replacement/master/files/docker/systemctl.py
+        dest: /usr/local/bin/systemctl
+        mode: '0755'
+
 - import_playbook: ../../main.yml

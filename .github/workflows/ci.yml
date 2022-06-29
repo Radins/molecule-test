@@ -11,11 +11,6 @@ jobs:
   test:
     name: Molecule
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        distro:
-          - centos8
-          - debian10
 
     steps:
       - name: Check out the codebase.
@@ -34,4 +29,3 @@ jobs:
         env:
           PY_COLORS: '1'
           ANSIBLE_FORCE_COLOR: '1'
-          MOLECULE_DISTRO: ${{ matrix.distro }}
